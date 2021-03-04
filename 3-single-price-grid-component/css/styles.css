@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(226, 236, 241);
+    font-family: Karla, sans-serif;
+    padding: 50px 20px;
+
+    display: grid;
+    place-items: center;
+    min-height: 100vh; 
+}
+
+.price-component {
+    display: grid;
+}
+
+@media screen and (min-width: 768px) {
+    .price-component {
+        grid-template-columns: 300px 300px; 
+        grid-template-rows: 180px 230px;
+    }
+}
+
+.message {
+    width: 300px;
+    height: 230px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px 5px 0 0;
+}
+
+.message__title {
+    color: hsl(179, 62%, 43%);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.message__subtitle {
+    color: hsl(71, 73%, 54%);
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.message__text {
+    color: hsl(218, 22%, 67%);
+    font-size: .8em;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    .message {
+       grid-column: 1 / 3;
+       grid-row: 1 / 2;
+       width: 600px;
+    }
+
+   .message__title {
+       font-size: 1.4em;
+    }
+
+   .message__subtitle {
+        font-size: 1em;
+    }
+
+   .message__text {
+       font-size: .9em;
+       font-weight: 700;
+    }
+}
+
+.subscription, .reason {
+    width: 300px;
+    height: 230px;
+    padding: 30px;
+    background-color: hsl(179, 61%, 44%);
+}
+
+.subscription__title, .reason__title {
+    color: hsl(179, 62%, 100%); 
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.subscription__cost {
+    color: hsl(179, 62%, 100%);
+    font-size: 2em; 
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.subscription__cost span {
+    font-size: .5em;
+    font-weight: 100;
+}
+
+.subscription__motivation {
+    color: hsl(179, 62%, 100%);
+    font-size: .9em;
+    margin-top: 0;
+}
+
+.subscription__signup {
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: .9em;
+    color: white;
+    width: 230px;
+    height: 40px;
+    background-color: hsl(71, 73%, 54%);
+    border: 0;
+    border-radius: 4px;
+}
+
+.reason { 
+    background-color: hsl(179, 47%, 52%);
+    border-radius: 0 0 5px 5px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .subscription {
+        border-radius: 0 0 0 5px;   
+    }
+
+    .reason {
+        border-radius: 0 0 5px 0;
+    }
+}
+
+.reason__text {
+    color: white;
+    font-size: .8em;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

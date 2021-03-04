@@ -1,0 +1,132 @@
+body {
+    background-image: url(../assets/images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
+    padding: 20px;
+    color: white;
+    font-family: Poppins, Open Sans, sans-serif;
+}
+
+.header__image {
+    display: inline-block;
+    width: 150px;
+    margin-bottom: 50px;
+}
+
+.main {
+    margin-bottom: 60px;
+}
+
+.mockup {
+    display: block;
+    width: 84vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.web-title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 50px;
+}
+
+.web-text {
+    text-align: center;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 30px;
+}
+
+.register-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+    text-decoration: none;
+    width: 170px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: .8em;
+}
+
+.aside-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media screen and (min-width: 801px) {
+    body {
+        background-image: url(../assets/images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        padding: 40px;
+
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .container-img {
+        margin-right: 50px;
+    }
+
+    .mockup {
+        max-width: 50vw;
+    }
+
+    .container-information {
+        padding-right: 1vw;
+        max-width: 50vw;
+    }
+
+    .web-title{
+        font-size: 2.5vw;
+        padding-right: 2vw;
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    .web-text {
+        padding: 0;
+        text-align: left;
+    }
+
+    .register-button {
+        margin-left: 0;
+    }
+
+    .aside-logos {
+        justify-content: flex-end;
+    }
+}
+
+.social-container {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.facebook__logo, .twitter__logo, .instagram__logo {
+    display: block;
+    width: 15px;
+    filter: invert(1);
+}
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

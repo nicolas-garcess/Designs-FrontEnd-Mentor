@@ -1,0 +1,145 @@
+html {
+    background-color:  #2aadeb;
+
+    font-size: 12px;
+    font-family: Kumbh Sans;
+    color: hsl(227, 10%, 46%);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden; /*Manejar cuidado esta propiedad con cuidado en el body, por lo que si se coloca y hay información no se verá*/
+
+    text-align: center;
+
+    /*Forma 1 de centrar la tarjeta*/
+    /* display: grid;
+    place-items: center; */
+
+    /*Forma 2 de centrar la tarjeta*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Se utilizan los pseudo-elementos para generar las figuras de fondo*/
+html::before, html::after {
+    content: '';
+    display: inline-block; /*Para poder darle tamaño*/
+    width: 40vmax;
+    height: 100vmax;
+    border-radius: 50%;
+    background-color:#4fe9e9;
+    opacity: 0.3;
+
+    position:fixed; /*Fija a la pantalla*/
+    z-index: -1; /*Las coloca por detrás*/
+}
+
+@media screen and (min-width: 768px) {
+    /*Se utilizan los pseudo-elementos para generar las figuras de fondo*/
+    html::before, html::after {
+        content: '';
+        display: inline-block; /*Para poder darle tamaño*/
+        width: 130vmin;
+        height: 130vmin;
+        border-radius: 50%;
+        background-color:#4fe9e9;
+        opacity: 0.3;
+
+        position:fixed; /*Fija a la pantalla*/
+        z-index: -1; /*Las coloca por detrás*/
+    }
+}
+
+/*Posicionaiento de los círculos*/
+html::before {
+    top: -70%;
+    left: -15%;
+}
+
+html::after {
+    bottom: -70%;
+    right: -15%;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 700;
+    color: hsl(229, 23%, 23%);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+small {
+    color: darkgray;
+    font-size: 0.7em;
+}
+
+/*Propiedades de la tarjeta*/
+.card {
+    width: 330px;
+    height: 350px;
+    border-radius: 5%;
+    background-color: white;
+    box-sizing: border-box;
+
+    overflow: hidden; /*Para ocultar lo que se salga de la tarjeta, en este caso es para ocultar la imagen del fondo puesto que tapa el redondeo, quitar esta propiedad para ver el cambio*/
+}
+
+/*Propiedades de la parte superior de la tarjeta*/
+.card__header {
+    background-image: url(../assets/images/pattern-card.svg);
+    background-repeat: no-repeat;
+    
+    height: 130px;
+ 
+    position: relative; /*Se coloca relative para poder que la imagen de la persona pueda ubicarse absolutamente*/
+
+    display: flex;
+    justify-content: center;
+}
+
+.card__image {
+    position: absolute;
+    bottom: 0; /*Siempre se ubicará en la parte inferior del div*/
+    border: white solid 5px;
+    border-radius: 50%;
+    transform: translateY(50%);/*Mueve la imagen la mitad de su altura hacia abajo*/
+}
+
+/*Propiedades del cuerpo de la tarjeta*/
+.card__name {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+    padding-bottom: 10px;
+}
+
+.card__text--light {
+    color: darkgray;
+}
+
+.card__stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: gainsboro solid 0.1px;
+    height: 90px;
+}
+
+.attribution {
+    font-size: 11px;
+
+    color: rgb(73, 71, 71);
+
+    position: absolute;
+    bottom: 30px;
+}
+.attribution a { color: hsl(228, 82%, 13%); }
